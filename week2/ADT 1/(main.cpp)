@@ -1,0 +1,47 @@
+#define CATCH_CONFIG_MAIN 
+#include "catch.hpp"
+#include "ostream"
+#include "rational.hpp"
+
+
+
+TEST_CASE( "constructor, two_parameters" ){
+   xy v( 3, 4 );
+   std::stringstream s;
+   s << v;
+   REQUIRE( s.str() == "(3,4)" );   
+}
+
+
+TEST_CASE( " copy of vector " ){
+   xy v =+ xy( 3, 4 );
+   REQUIRE( v == xy( 3, 4 ) );   
+}
+
+
+TEST_CASE( "add vector into vector" ){
+   xy v( 3, 10 );
+   v += xy( 6, 7 ); 
+   REQUIRE( v == xy ( 9,17 ) );     
+}
+
+TEST_CASE( "add vector into vector; return value" ){
+   xy v( 1, 2 );
+   xy x = ( v += xy( 1, 4 ));      
+   REQUIRE( x == xy( 2, 6 ) );     
+}
+
+
+TEST_CASE( "multiply vector by integer" ){
+   xy v( 3, 4 );
+   xy x = v * 7;
+   REQUIRE( x == xy( 21, 28 ) );   
+}
+
+
+TEST_CASE( "multiply integer by vector" ){
+   xy v( 3, 4 );
+   xy x = 7 * v;
+   REQUIRE( x == xy( 21, 28 ) );   
+}
+

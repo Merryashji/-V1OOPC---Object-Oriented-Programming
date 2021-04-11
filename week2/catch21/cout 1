@@ -1,0 +1,44 @@
+#include <iostream>
+#include <iomanip>
+class  rational {
+        
+public: 
+   int counter;
+   int denominator;
+      
+   void reduce(){
+      int a = counter;
+      int b = denominator;
+
+      while( b ){
+         int temp = b;
+         b = a % b;
+         a = temp;
+      }
+
+      if( a ){
+         counter /= a;
+         denominator /= a;
+      }
+   }
+   rational( int counter, int denominator):
+     counter( counter ), denominator( denominator )
+   {}
+
+};
+
+
+std::ostream & operator<<( std::ostream & lhs,  rational pos ){
+   lhs << " in dec: " << pos.counter << "/" <<pos.denominator <<  "\n"
+   << " in hex: " << std::hex << pos.counter <<"/" << std::hex << pos.denominator << "\n" 
+   << " met voorloopnullen: " << std::setfill('0') << std::setw(20) << pos.counter<<"/" << std::setfill('0') << std::setw(20) << pos.denominator<<"\n"
+   << " met 0x: " << std::showbase << std::hex << pos.counter<< "/" << std::showbase <<std::hex << pos.denominator <<"\n";  
+   return lhs;
+}
+
+
+int main(int argc, char **argv){
+   rational pos1( 1000, 10 );
+   pos1.reduce();
+   std::cout <<  pos1 << "\n";    
+}

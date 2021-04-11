@@ -1,0 +1,106 @@
+#ifndef RATIONAL_HPP
+#define RATIONAL_HPP
+#include <iostream>
+
+/// @file
+
+/// \brief
+/// vector ADT 
+/// \details
+/// This is an ADT that implements vector values.
+/// The vector has two integers x and y.
+class xy {
+public:
+   int x;
+   int y;
+
+   /// \brief
+   /// constructor
+   /// \details
+   /// This constructor initializes a vector from its x  and y.
+   xy( int x, int y ):
+      x( x ), y( y ){}
+
+      
+   /// \brief
+   /// constructor
+   /// \details
+   /// default constructor 
+   xy(){}
+   
+   bool operator==( const xy & rhs ) const {
+      return ( x == rhs.x ) && ( y == rhs.y );
+   }
+   
+   /// \brief 
+   /// copy of a vector 
+   /// \details
+   /// this operator+ gives a copy of a vector
+   xy operator+()const {
+       return xy(x,y);
+   }
+   
+   /// \brief
+   /// add a vector to another vector
+   /// \details
+   /// the +operator add a vector to another vector. 
+   xy operator+( const xy & rhs ) const {
+       return xy( x + rhs.x, y + rhs.y );
+   }
+   
+   /// \brief   
+   /// multiply a vector by an integer
+   /// \details
+   /// This operator* multiplies a vector value by an integer value.
+   xy operator*( const int rhs ) const {
+      return xy ( x * rhs, y * rhs );
+   }
+   
+   xy & operator*=( const xy & rhs );
+   xy & operator+=( const xy & rhs );
+
+};
+
+/// \brief   
+/// add a vector to another vector
+/// \details
+/// This operator+= adds a vector value a vector variable.
+xy & xy::operator+=( const xy & rhs ){
+    x += rhs.x;
+    y += rhs.y;
+    return *this;
+}
+
+
+
+/// \brief
+/// output operator for a vector 
+/// \details
+/// This operator<< prints a constructor in the format
+/// (x,y) where both values are printed as
+/// decimal values.
+std::ostream & operator<<( std::ostream & lhs, xy pos ){
+    lhs << "(" << pos.x << "," << pos.y << ")";
+    return lhs;
+}
+
+/// \brief   
+/// multiply an integer by a vector
+/// \details
+/// This operator* multiplies an integer value by a vector value.
+xy operator*( const int rhs,const xy & m ){
+    return xy ( rhs * m.x , rhs * m.y  );
+}
+      
+/// \brief   
+/// multiply a vector by a vector
+/// \details
+/// This operator*= multiply a vector value a vector variable.
+xy & xy::operator*=( const xy & rhs ){
+    x *= rhs.x;
+    y *= rhs.y;
+    return *this;
+}
+ 
+   
+#endif
