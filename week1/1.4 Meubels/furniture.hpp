@@ -1,6 +1,6 @@
 #ifndef FURNITURE_HPP
 #define FURNITURE_HPP
-#include "Meubels.hpp"
+#include "meubels.hpp"
 
 class furniture {
 private:

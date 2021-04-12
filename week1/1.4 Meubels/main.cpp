@@ -1,5 +1,4 @@
-#include "Meubels.hpp"
-#include "Meubels.cpp"
+#include "meubels.hpp"
 #include "furniture.hpp"
 
 int main(){

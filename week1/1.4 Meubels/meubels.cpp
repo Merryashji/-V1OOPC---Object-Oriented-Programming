@@ -1,5 +1,4 @@
-#include <iostream>
-#include "Meubels.hpp"
+#include "meubels.hpp"
 #include "furniture.hpp"
 using namespace std;
 
@@ -7,14 +6,12 @@ void stool::print(){
     cout << n_legs << " aantal legs "
     << n_seats << " aantal seats " << endl;
 }
+
 int stool::poot(){
-    if (n_legs > 0){
-    	n_legs = n_legs -1 ; 
-    	return 1;
-    } else {
-	return 0; 
-      }
+    n_legs = n_legs -1 ; 
+    return 1;
 }
+
 void table::print(){
     cout << n_legs << " aantal legs "
     << length << " length " << width << " witdth "<< endl;

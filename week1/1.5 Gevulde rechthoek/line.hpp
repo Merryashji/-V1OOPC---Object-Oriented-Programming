@@ -1,3 +1,6 @@
+// example:
+// declaration of a line class 
+
 #ifndef LINE_HPP
 #define LINE_HPP
 
