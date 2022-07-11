@@ -1,0 +1,34 @@
+		while (true) {
+			RCLCPP_INFO(get_logger(), "Recording started");
+			rec.record();
+			RCLCPP_INFO(get_logger(), "Recording finished");
+			transcription = token.transcribeAudio(rec.buffer, rec.size);
+			if (transcription != "Transcription failed") {
+				std::stringstream ss;
+
+				std::for_each(transcription.begin(), transcription.end(), [](char& c) {
+					c = ::tolower(c);
+					});
+				std::string find_letter = "letter";
+				std::string find_number = "nummer";
+
+				int index_found_letter = transcription.find(find_letter);
+				int index_found_number = transcription.find(find_number);
+				std::string letter_number_move = "";
+				if (index_found_letter != std::string::npos && index_found_number != std::string::npos) {
+					char letter_move = transcription[index_found_letter + find_letter.length() + 1];
+					char number_move = transcription[index_found_number + find_letter.length() + 1];
+					letter_number_move = letter_number_move + letter_move + number_move;
+					ss << "i found " << letter_number_move << "\n";
+				}
+				else {
+					std::cout << "failed letter or number\n";
+				}
+				RCLCPP_INFO(get_logger(), "Publishing: '%s'", transcription.c_str());
+				message.data = stringToGcode(transcription);
+				publisher->publish(message);
+			}
+			else {
+				RCLCPP_INFO(get_logger(), "Transcription failed :(");
+			}
+		}
