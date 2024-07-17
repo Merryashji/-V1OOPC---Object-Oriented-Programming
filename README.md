@@ -33,14 +33,18 @@ Voer 2 in voor de commandline-interface.
 - Kies 2 om de commandline-interface te gebruiken.
 - De coördinaten gaan van **0 tot 2**, waarbij de eerste coördinaat de rij en de tweede coördinaat de kolom is.
 - Voer een rij en kolom in om een zet te doen (bijvoorbeeld 1 1):
-. . .
-. X .
-. . .
+    ```
+    . . .
+    . X .
+    . . .
+    ```
 Player O's turn. Enter row and column (or 'u' to undo): 
 - Voer 'u' in om de laatste zet ongedaan te maken:
-. . .
-. . .
-. . .
+    ```
+    . . .
+    . . .
+    . . .
+    ```
 Player X's turn. Enter row and column (or 'u' to undo):
 - Voer een rij en kolom in buiten de bordgrootte (bijvoorbeeld 3 3):
 Invalid move. Try again.
