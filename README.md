@@ -40,30 +40,31 @@ Het is belangrijk om het project schoon te maken na het bouwen van een interface
 
 ## 3. Voorbeeldinvoer en -uitvoer
 ### SFML-interface
-- Klik op de vakjes om zetten te doen.
-- Klik op de groene knop "Undo" om de laatste zet ongedaan te maken.
-- Klik op de rode knop "Reset" om het spel opnieuw te starten.
+- Klik op een vakje om het te vullen met 'X' of 'O'.
+- Win het spel door drie 'X' of drie 'O' op een rij te plaatsen (horizontaal, verticaal of diagonaal).
+- Als het bord vol is en niemand heeft gewonnen, eindigt het spel in een gelijkspel.
+- Gebruik de "Undo" knop om de laatste zet ongedaan te maken.
 
 ### Commandline-interface 
-- Het bord zit als de volgende uit:
+- Het bord ziet er als volgt uit:
     ```
     1 2 3
     4 5 6
     7 8 9
     ```
-- Voer een getaal tussen 1 en 9 in om een zet te doen (bijvoorbeeld 5):
+- Voer een getal tussen 1 en 9 in om een zet te doen (bijvoorbeeld 5):
     ```
     . . .
     . X .
     . . .
     ```
-Player O's turn. Enter row and column (or 'u' to undo): 
+Player O's turn. Enter a number (from 1->9) (or 'u' to undo): 
 - Voer 'u' in om de laatste zet ongedaan te maken:
     ```
     . . .
     . . .
     . . .
     ```
-Player X's turn. Enter row and column (or 'u' to undo):
+Player X's turn. Enter a number (from 1->9) (or 'u' to undo):
 - Voer een getal in buiten de bordgrootte (bijvoorbeeld 10):
 Invalid move. Try again.
