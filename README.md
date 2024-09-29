@@ -4,10 +4,18 @@
 
 Dit project implementeert een Tic-Tac-Toe (3-op-een-rij) spel. De implementatie maakt gebruik van het Command pattern om het verloop van het spel te beheren en het Model-View-Controller (MVC) pattern om verschillende onderdelen te scheiden. Het spel ondersteunt zowel een grafische interface (SFML) als een text-only interface.
 
-## 1. Kiezen van de Interface
-Bij het uitvoeren van de applicatie krijg je de keuze om een van de twee interfaces te gebruiken:
-Voer 1 in voor de SFML-interface.
-Voer 2 in voor de commandline-interface.
+## Applicatie bouwen en uitvoeren
+### 1. Grafische interface (SFML)
+1->  make -f MakefileSfml
+2->  ./main.exe
+### 2. Text-only interface (commandline)
+Deze versie is onavhankelijk van sfml library en om het te bouwen en uitvoeren word de volgende command gebruikt:
+1->  make -f MakefileText
+2->  ./tictactoe_text
+### note:
+Het is belanglijk om de project te shonen met clean command nodat het bowen van een interface. 
+Sfml -> make -f MakefileSfml clean
+Text -> make -f MakefileText clean
 
 ## 2. Spelinstructies
 ### Spelen met SFML
