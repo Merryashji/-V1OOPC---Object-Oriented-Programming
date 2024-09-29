@@ -32,15 +32,18 @@ Het is belanglijk om de project te shonen met clean command nodat het bowen van 
 
 ## 3. Voorbeeldinvoer en -uitvoer
 ### SFML-interface
-- Kies 1 om de SFML-interface te gebruiken.
 - Klik op de vakjes om zetten te doen.
 - Klik op de groene knop "Undo" om de laatste zet ongedaan te maken.
 - Klik op de rode knop "Reset" om het spel opnieuw te starten.
 
-### Commandline-interface
-- Kies 2 om de commandline-interface te gebruiken.
-- De coördinaten gaan van **0 tot 2**, waarbij de eerste coördinaat de rij en de tweede coördinaat de kolom is.
-- Voer een rij en kolom in om een zet te doen (bijvoorbeeld 1 1):
+### Commandline-interface 
+Het bord zit als de volgende uit:
+    ```
+    1 2 3
+    4 5 6
+    7 9 8
+     ```
+- Voer een getaal tussen 1 en 9 in om een zet te doen (bijvoorbeeld 5):
     ```
     . . .
     . X .
@@ -54,5 +57,5 @@ Player O's turn. Enter row and column (or 'u' to undo):
     . . .
     ```
 Player X's turn. Enter row and column (or 'u' to undo):
-- Voer een rij en kolom in buiten de bordgrootte (bijvoorbeeld 3 3):
+- Voer een getal in buiten de bordgrootte (bijvoorbeeld 10):
 Invalid move. Try again.
