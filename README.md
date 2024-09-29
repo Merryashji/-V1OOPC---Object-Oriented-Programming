@@ -37,7 +37,7 @@ Het is belanglijk om de project te shonen met clean command nodat het bowen van 
 - Klik op de rode knop "Reset" om het spel opnieuw te starten.
 
 ### Commandline-interface 
-Het bord zit als de volgende uit:
+- Het bord zit als de volgende uit:
     ```
     1 2 3
     4 5 6
