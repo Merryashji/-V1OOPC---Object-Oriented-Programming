@@ -6,16 +6,24 @@ Dit project implementeert een Tic-Tac-Toe (3-op-een-rij) spel. De implementatie 
 
 ## Applicatie bouwen en uitvoeren
 ### 1. Grafische interface (SFML)
+#### 1. Gebruik het volgende commando om te bouwen:
 - make -f MakefileSfml
+#### 2. Start de applicatie met:
 - ./main.exe
+
 ### 2. Text-only interface (commandline)
-Deze versie is onavhankelijk van sfml library en om het te bouwen en uitvoeren word de volgende command gebruikt:
+Deze versie is onafhankelijk van de SFML-library
+#### 1. Gebruik het volgende commando om te bouwen:
 - make -f MakefileText
+#### 2. Start de applicatie met:
 - ./tictactoe_text
-### note:
-Het is belanglijk om de project te shonen met clean command nodat het bowen van een interface. 
-- Sfml ->  make -f MakefileSfml clean
-- Text ->  make -f MakefileText clean
+
+### Opmerking:
+Het is belangrijk om het project schoon te maken na het bouwen van een interface. Gebruik de volgende commando's:
+#### Sfml 
+- make -f MakefileSfml clean
+#### Text 
+- make -f MakefileText clean
 
 ## 2. Spelinstructies
 ### Spelen met SFML
