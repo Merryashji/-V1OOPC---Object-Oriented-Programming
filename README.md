@@ -41,8 +41,8 @@ Het bord zit als de volgende uit:
     ```
     1 2 3
     4 5 6
-    7 9 8
-     ```
+    7 8 9
+    ```
 - Voer een getaal tussen 1 en 9 in om een zet te doen (bijvoorbeeld 5):
     ```
     . . .
