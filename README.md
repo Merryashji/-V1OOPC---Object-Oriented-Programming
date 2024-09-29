@@ -1,6 +1,6 @@
 # CPSE2 Herkansing 2023/24 - H5. Tic-tac-toe - Merry Ashji 
 
-## Type: Visual Studio
+##
 
 Dit project implementeert een Tic-Tac-Toe (3-op-een-rij) spel. De implementatie maakt gebruik van het Command pattern om het verloop van het spel te beheren en het Model-View-Controller (MVC) pattern om verschillende onderdelen te scheiden. Het spel ondersteunt zowel een grafische interface (SFML) als een text-only interface.
 
