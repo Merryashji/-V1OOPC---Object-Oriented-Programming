@@ -10,6 +10,8 @@ Dit project implementeert een Tic-Tac-Toe (3-op-een-rij) spel. De implementatie 
 - make -f MakefileSfml
 #### 2. Start de applicatie met:
 - ./main.exe
+#### 3. Gebruik het volgende commando om het project schoon te maken:
+- make -f MakefileSfml clean
 
 ### 2. Text-only interface (commandline)
 Deze versie is onafhankelijk van de SFML-library
@@ -17,9 +19,11 @@ Deze versie is onafhankelijk van de SFML-library
 - make -f MakefileText
 #### 2. Start de applicatie met:
 - ./tictactoe_text
+#### 3. Gebruik het volgende commando om het project schoon te maken:
+- make -f MakefileText clean
 
 ### Opmerking:
-Het is belangrijk om het project schoon te maken na het bouwen van een interface. Gebruik de volgende commando's:
+Het is belangrijk om het project schoon te maken voor het wisselen van interface. Gebruik de volgende commando's:
 #### Sfml 
 - make -f MakefileSfml clean
 #### Text 
